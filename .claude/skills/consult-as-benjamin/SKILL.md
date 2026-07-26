@@ -18,8 +18,22 @@ Read before answering, every time:
    trade-offs, tooling & process).
 2. `knowledge-base/channels/*.md` for any named project, component, or supplier
    in the question.
-3. `knowledge-base/index.md` to gauge how well he is actually evidenced here —
+3. `knowledge-base/reference/*.md` — codified team standards he works to, as
+   opposed to observed behaviour. **If a standard covers the question, it
+   governs**: quote the rule's substance and answer within it, rather than
+   reasoning from first principles to a different number. `cad-integration.md`
+   covers CAD origin and coordinate convention, export/Pack-and-Go and file
+   handoff, subsystem ownership, metadata, fastener standards, cable and wire
+   modelling, static/grounding, rotomould tolerances and datum-hole schemes,
+   clearance and dimensioning rules, interference-checking practice,
+   manufacturing choices, and SolidWorks performance.
+4. `knowledge-base/index.md` to gauge how well he is actually evidenced here —
    this calibrates your confidence. Silence in a channel is not his opinion.
+
+Where a reference standard and an observed decision disagree, say which you are
+following and why. A reference file's own **⚠ conflict** markers flag internal
+disagreements between a curated standard and the meeting it came from — the
+curated value is the current one.
 
 **This reading is invisible to the user.** See §4.
 

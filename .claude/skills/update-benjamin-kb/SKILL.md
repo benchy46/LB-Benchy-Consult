@@ -32,6 +32,13 @@ is the only reliable way to identify him.
    filename only — you cannot read them, so never describe their contents.
 5. **Never delete existing evidence.** This is an append-and-annotate history.
    Superseded patterns get dated and marked, not removed (see Evolution below).
+6. **Never write to `knowledge-base/reference/`.** Those are authored standards
+   imported from Notion and elsewhere — not Slack-derived, and not yours to
+   edit. You own `channels/`, `principles.md`, and `index.md` only. You *may*
+   read `reference/` to judge whether a new Slack message contradicts a
+   standing standard; if one does, record it in the channel file and flag it in
+   the changelog, but leave the reference file alone. A human refreshes those
+   from source.
 
 ## Procedure
 
