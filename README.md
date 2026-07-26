@@ -27,6 +27,18 @@ A copy of the consult skill is also installed at
 `~/.claude/skills/consult-as-benjamin/` so it works from any directory; the
 runner re-syncs that copy after every successful update.
 
+## How the consult skill behaves
+
+It answers as an advisor, not an oracle. On a situational question it will
+**ask before it recommends** — scoping the decision boundary, the build phase,
+what is measured versus assumed, the binding constraint, and the blast radius —
+because advice given without the phase or the real constraint is close to
+useless. It caps itself at one or two rounds of questions, and if you tell it to
+just give the answer, it does, stating its assumptions up front instead.
+
+It also states its own grounding before advising: whether the topic sits in a
+channel where Benjamin is richly evidenced, or one where it is extrapolating.
+
 ## The weekly refresh
 
 A Windows Scheduled Task (`LB-Benchy-Consult Weekly KB Update`) runs
