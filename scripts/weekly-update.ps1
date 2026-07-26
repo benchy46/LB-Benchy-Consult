@@ -102,25 +102,31 @@ $allowedList = @(
     'mcp__slack__slack_read_user_profile'
 )
 
-# Grant git ONLY on a real run. A prompt saying "do not commit" is not a
-# guarantee -- the 2026-07-26 dry run committed anyway despite being told not
-# to. Withholding the tool makes the dry-run promise enforceable instead of
-# advisory. The runner does its own pull above, so the read path needs no git.
+# Grant git ONLY on a real run. Two escalating lessons from 2026-07-26:
+#   1. A prompt saying "do not commit" is not a guarantee -- the first dry run
+#      committed anyway despite being told not to.
+#   2. Merely leaving Bash out of --allowedTools is ALSO not a guarantee --
+#      that flag ADDS permissions, it does not restrict them, so the second dry
+#      run committed too. Only --disallowedTools actually denies.
+# Hence: allowlist for the real run, explicit denylist for the dry run, plus the
+# HEAD assertion below as a third line of defence.
 if (-not $DryRun) { $allowedList += 'Bash(git:*)' }
 $allowed = $allowedList -join ','
+$denied = if ($DryRun) { 'Bash' } else { '' }
 
 $headBefore = (Invoke-Git rev-parse HEAD).Lines[0]
 
 Log "invoking claude (timeout ${TimeoutMinutes}m, git $(if($DryRun){'WITHHELD'}else{'granted'}))..."
 
 $job = Start-Job -ScriptBlock {
-    param($exe, $repo, $prompt, $allowed)
+    param($exe, $repo, $prompt, $allowed, $denied)
     $ErrorActionPreference = 'Continue'
     Set-Location $repo
-    & $exe -p $prompt --allowedTools $allowed --permission-mode acceptEdits 2>&1 |
-        ForEach-Object { $_.ToString() }
+    $cliArgs = @('-p', $prompt, '--allowedTools', $allowed, '--permission-mode', 'acceptEdits')
+    if ($denied) { $cliArgs += @('--disallowedTools', $denied) }
+    & $exe $cliArgs 2>&1 | ForEach-Object { $_.ToString() }
     "___CLAUDE_EXIT___$LASTEXITCODE"
-} -ArgumentList $ClaudeExe, $Repo, $prompt, $allowed
+} -ArgumentList $ClaudeExe, $Repo, $prompt, $allowed, $denied
 
 if (-not (Wait-Job $job -Timeout ($TimeoutMinutes * 60))) {
     Stop-Job $job

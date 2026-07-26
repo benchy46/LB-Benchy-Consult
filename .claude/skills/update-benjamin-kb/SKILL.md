@@ -121,7 +121,14 @@ real cost. Most weeks this file should not change at all.
 
 ### 6. Record and commit
 
-Prepend an entry to `CHANGELOG.md`:
+**Empty window? Stop here.** If no channel file changed and no principle was
+classified — because there were no new messages, or every hit was already
+captured — then write **no** `CHANGELOG.md` entry, make **no** commit, and leave
+`STATE.json` alone. Report "empty window, nothing to record" and finish. Quiet
+weeks are normal, and a changelog that logs its own idleness buries the entries
+that matter. The run log in `logs/` is the record that the job fired.
+
+Otherwise, prepend an entry to `CHANGELOG.md`:
 
 ```markdown
 ## <YYYY-MM-DD> — window <start> to <end>
