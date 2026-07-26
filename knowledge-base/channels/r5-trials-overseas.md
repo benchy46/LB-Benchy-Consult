@@ -1,0 +1,17 @@
+# #r5-trials-overseas
+**Slack channel ID:** C09GGFBH7UG
+**Purpose:** Operational coordination channel for R5 field trials in Europe/UK (Tesco, Wisag, REWE, IKEA, hospitals, sports venues, etc.) — shipment logistics, dock/charger allocation, field issue reports from RST/distributor staff, and hardware feedback from the field. Channel spans 2025-09-17 (creation) through the present (2026-07-09, last activity); volume is very high (many hundreds of messages, largely logistics/shipping/media-sharing) and was sampled by paginating the full date range rather than reading every message in full detail — Benjamin himself posts only rarely in this channel.
+
+## Decisions & Reasoning (Benjamin)
+- **Proposed a "dry" function for the vacuum motor as a mold-mitigation feature**, in response to a field report of mold forming inside a HEPA filter (food + water residue at a food-processing site): "The best we can do is ask the customer to open and air dry the machine. Alternatively if we can make the machine have a 'dry' function, where we run the vacuum motor at 15% continuously only while plugged into the charger, or while docking, it may mitigate somewhat, by always making sure the environment is drying out and not moist." This came after Dylan Ng had already framed the mold issue as a customer-environment consequence ("food+water = mold... not a design issue of our robot") rather than a robot defect — Benjamin's reply focused on what the product could still proactively do (passive drying during charge/dock cycles) rather than disclaiming responsibility — 2026-05-01 — [source](https://lionsbot.slack.com/archives/C09GGFBH7UG/p1777622718149299)
+
+## Notable Exchanges
+- Benjamin's contribution to the HEPA-mold thread is his only substantive message found in this channel's full history; the surrounding 33-reply thread includes debate between Joei Wee, Mayur Patel, Bhanu, Dylan Ng and others over HEPA-vs-foam-sponge tradeoffs (foam is cheaper/easier to wash, HEPA protects better; Mayur argued "the design of the vac motor is just not good for this type of environment" and that customers will either replace HEPA constantly or replace the vac motor every 6-12 months with foam). Benjamin's reply comes in after that debate and reframes toward a concrete mitigating feature rather than relitigating the HEPA-vs-foam choice — [source](https://lionsbot.slack.com/archives/C09GGFBH7UG/p1777462884980399).
+- This channel is dominated by RST/distributor voices (Mayur Patel, Daniel Cushion, Bhanu Akhilesh Gadde, Joei Wee, Niranjan, Helge Mood, etc.) reporting field issues (squeegee degradation, brush deck dropping before motion causing "donuts," obstacle-avoidance stops, packaging/crate problems, CE/UKCA documentation questions, cold-weather battery behavior) — none of these are Benjamin's own statements and are retained here only as channel context.
+
+## Recurring Themes / Principles Observed
+- Even on a reactive field-support channel, Benjamin's one visible intervention favors a system-level mitigation (an automatic drying behavior tied to charging/docking) over blaming the customer's environment or treating the issue as purely a consumables/parts question.
+
+## Referenced Files (not content-readable)
+- Various field-issue images/videos across the channel (squeegee wear photos, mold-affected HEPA filter HEIC photos, unboxing/crating videos, sales demo reel clips) — none opened; only surrounding text considered.
+- IMG_2546/2545/2543/2544 (.heic) — mold-affected HEPA filter photos referenced in the thread Benjamin replied to.
