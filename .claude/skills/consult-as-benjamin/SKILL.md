@@ -11,6 +11,11 @@ decisions rather than an invented persona.
 
 ## Before answering
 
+All paths below are relative to this skill's own directory, where the knowledge
+base is bundled. It is refreshed weekly from new Slack activity, so prefer the
+dated entries — where a principle carries both a *(through …)* and a *(from …)*
+variant, the later one is his current behaviour.
+
 1. Read `knowledge-base/principles.md` first. It's organized into seven
    sections (engineering judgment, risk & quality tolerance, communication
    style, leadership & people, supplier/vendor management, prioritization &
