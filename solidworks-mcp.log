@@ -1,0 +1,5 @@
+{"level":"info","message":"Resources registered","timestamp":"2026-07-26 19:41:41","types":["design-table"]}
+{"byStatus":{},"byType":{},"level":"info","message":"State store loaded","timestamp":"2026-07-26 19:41:41","totalResources":0}
+{"features":{"macroRecording":true,"pdmIntegration":false,"sqlIntegration":false},"level":"info","message":"SolidWorks MCP Server started","timestamp":"2026-07-26 19:41:41","version":"3.1.3"}
+{"level":"info","message":"[http] SW Bridge HTTP listening on http://localhost:8765","timestamp":"2026-07-26 19:41:42"}
+{"level":"warn","message":"[http] Port 8765 already in use — HTTP server not started","timestamp":"2026-07-26 19:41:42"}
