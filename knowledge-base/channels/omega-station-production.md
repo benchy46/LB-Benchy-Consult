@@ -1,0 +1,25 @@
+# #omega-station-production
+**Slack channel ID:** C07BKB74ZRU
+**Purpose:** Production-floor working channel for SC25 Docking Station builds — day-to-day fit/QC failures (chassis, gaskets, side-access panel, PCB/LED issues), BOM/screw-spec changes, rework decisions, and coordination between production (Norris Joo, Ong Ning Wei), R&D (Daniel Tan, Benjamin Chay), and supply chain. This is one of the more substantive channels for Benjamin's direct voice in the Omega batch.
+
+## Decisions & Reasoning (Benjamin)
+- **Rubber feet rework decision — lays out 3 options and recommends the least-effort one, with reasoning**: after the rubber-feet supplier agreed to replace 400 defective pieces (2 week lead time), Benjamin framed the interim decision for docking stations already needing to ship: "1. try another method of gluing and test the strength again / 2. Use another type of glue and test the strength again / 3. No rework, risk of more of this parts being damaged can only be mitigated when the new batch comes, Need to inform nilfisk." When Jack needed a fast call ("We will need a decision on this ASAP"), Benjamin recommended option 3 explicitly because "the rest will still need more time to investigate" — i.e. don't burn time on an unproven fix under time pressure; disclose and wait for the real replacement batch. Jack adopted the recommendation immediately ("Let's push for Option 3, I'll update Nilfisk side"). 2024-09-16. [source](https://lionsbot.slack.com/archives/C07BKB74ZRU/p1726452583218839) (thread, 6 replies)
+- **Gasket-length CAD error — pinpoints root cause down to which surface was measured**: "Yes it is correct as per the drawing. However, the dimensions as per design are wrong, it is 15mm too long in CAD, as you measured also the same thing. So is the design issue... What seemed to have happened is that the dimension for the gasket length was taken from the outer surface, instead of the inner surface with the adhesive." Confirms it's a design error (not a supplier/manufacturing error) and diagnoses exactly how the CAD mistake was made. 2024-10-15. [source](https://lionsbot.slack.com/archives/C07BKB74ZRU/p1728974476485109)
+- **Brass insert sunken on QR-code panel — accepts as low-risk rather than rejecting the part**: Norris Joo notes "one front skin qr code brass insert is sunken. Benjamin said its low risk, so we will still use it and tighten with the original M4x10 SHCS screw" — a pragmatic accept-with-monitoring call on a cosmetic/marginal defect rather than a full reject. 2024-08-19. [source](https://lionsbot.slack.com/archives/C07BKB74ZRU/p1724035159498029)
+- **Process housekeeping**: "Btw, I'm forwarding chats that should be here, for tracking purposes" while relaying several forwarded threads into the channel — shows a habit of actively consolidating scattered discussion into the channel of record rather than letting decisions live in DMs. 2024-10-03. [source](https://lionsbot.slack.com/archives/C07BKB74ZRU/p1727917135503259)
+
+## Notable Exchanges
+- The rubber-feet thread is a clean example of his decision style under time pressure: state the options plainly, pick one with a one-line reason ("the rest will still need more time to investigate"), and let a more senior stakeholder (Jack) ratify and communicate it externally to Nilfisk — Benjamin makes the technical call, Jack owns the customer-facing follow-through.
+- Consistently the named engineering point-of-contact Norris Joo and Ning Wei tag when something needs an accept/reject or root-cause call on the docking station (sink gasket, gap criteria, sunken insert, top-cover fitment) — he's treated as the arbiter, not just a cc'd bystander.
+- Thanked directly by Ong Ning Wei for hands-on QC help: "thanks for the literal heavy support today, could not have 100% checked without your help" — indicates he does floor-level QC work himself, not just remote sign-off. 2024-09-05. [source](https://lionsbot.slack.com/archives/C07BKB74ZRU/p1725529732965559)
+
+## Recurring Themes / Principles Observed
+- Distinguishes design defects from manufacturing/supplier defects explicitly before deciding next steps (gasket length CAD error vs. brass-insert cosmetic issue) — the fix follows from where the fault actually originated.
+- Under shipping-deadline pressure, favors the option that doesn't consume more investigation time now, paired with transparent customer disclosure (SCAR/Nilfisk notification) rather than a rushed, unvalidated fix.
+- Willing to accept low-risk cosmetic/marginal defects into production rather than blocking on rework, but only after explicitly labeling the risk as low.
+- Does hands-on floor QC personally rather than only reviewing reports.
+
+## Referenced Files (not content-readable)
+- `IMG_1767.jpg`, `IMG_1729.jpg` and related photos of side-access-panel fit and warping issues (Norris Joo)
+- `image.png` gasket-length comparison photo (2024-10-15 thread)
+- Various QC/torque videos (`IMG_3771.MOV`, etc.) documenting back-bottom-cover washer and screw-torque investigations (Norris Joo, into 2025)
