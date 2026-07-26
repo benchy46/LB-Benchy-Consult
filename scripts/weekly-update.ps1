@@ -73,7 +73,7 @@ if ($pull.Code -ne 0) {
 
 # --- Run the update -------------------------------------------------------
 $commitClause = if ($DryRun) {
-    "DRY RUN: make all the file edits, but do NOT run git add, git commit, or git push. End by printing the diffstat you would have committed."
+    "DRY RUN: make all the file edits, but do not commit or push. Git is not available to you on this run -- the tool is withheld, so do not attempt it. Finish by describing what you would have committed."
 } else {
     "Commit and push as the skill describes."
 }
@@ -92,18 +92,26 @@ Finish with a short plain-text summary: messages reviewed, channels touched,
 new channels created, and whether principles.md or the consult skill changed.
 "@
 
-$allowed = @(
+$allowedList = @(
     'Read', 'Write', 'Edit', 'Glob', 'Grep', 'TodoWrite'
-    'Bash(git:*)'
     'mcp__slack__slack_search_public_and_private'
     'mcp__slack__slack_read_thread'
     'mcp__slack__slack_read_channel'
     'mcp__slack__slack_search_channels'
     'mcp__slack__slack_search_users'
     'mcp__slack__slack_read_user_profile'
-) -join ','
+)
 
-Log "invoking claude (timeout ${TimeoutMinutes}m)..."
+# Grant git ONLY on a real run. A prompt saying "do not commit" is not a
+# guarantee -- the 2026-07-26 dry run committed anyway despite being told not
+# to. Withholding the tool makes the dry-run promise enforceable instead of
+# advisory. The runner does its own pull above, so the read path needs no git.
+if (-not $DryRun) { $allowedList += 'Bash(git:*)' }
+$allowed = $allowedList -join ','
+
+$headBefore = (Invoke-Git rev-parse HEAD).Lines[0]
+
+Log "invoking claude (timeout ${TimeoutMinutes}m, git $(if($DryRun){'WITHHELD'}else{'granted'}))..."
 
 $job = Start-Job -ScriptBlock {
     param($exe, $repo, $prompt, $allowed)
@@ -147,7 +155,16 @@ if (Test-Path $statePath) {
 if ($DryRun) {
     $diff = Invoke-Git diff --stat
     $diff.Lines | ForEach-Object { Log "dryrun-diff: $_" }
-    Log "=== dry run complete; nothing committed, nothing synced ==="
+
+    # Belt and braces: prove HEAD did not move, so a future regression in the
+    # permission plumbing surfaces here instead of silently committing.
+    $headAfter = (Invoke-Git rev-parse HEAD).Lines[0]
+    if ($headAfter -ne $headBefore) {
+        Log "ERROR: dry run moved HEAD $headBefore -> $headAfter. It committed despite git being withheld."
+        Log "Inspect and undo with: git reset --soft $headBefore"
+        exit 1
+    }
+    Log "=== dry run complete; HEAD unmoved, nothing committed, nothing synced ==="
     exit 0
 }
 
