@@ -1,0 +1,20 @@
+# #r5-product-innovation-ip
+**Slack channel ID:** C08LF96PE92
+**Purpose:** Coordination channel between LionsBot's R5 team and external patent counsel (Sachin Raj Paul, IP counsel; also references firm "InventIP"/FPA Attorneys) for design/utility patent filings, freedom-to-operate (FTO) studies, and patent-risk review on R5 hardware features. Channel runs 2025-04-02 (creation) to 2026-07-16 (last observed activity), fully captured in one page. Content is IP-sensitive; this summary captures process/reasoning only and avoids reproducing proprietary technical specifics beyond what's needed for context, per instruction.
+
+**Note on substantiveness**: Benjamin's own messages in this channel are sparse and mostly short/logistical. The bulk of the channel is patent counsel (Sachin) driving FTO reports, patent risk lists, and filing timelines, with Wei Hua (design) and Joei Wee (PM) as the more active LionsBot-side participants on strategy. Benjamin appears mainly as a technical point of contact providing documentation/photos on request.
+
+## Decisions & Reasoning (Benjamin)
+- **Adapted documentation method to fit the patent counsel's actual need**: when asked to help illustrate a flexing squeegee blade for a design patent, Benjamin judged that diagrams wouldn't capture the 3D flexing behavior well and proposed real photographs instead: "may be slightly difficult but i may have to take real life photos instead because diagrams cant show the flexing of the blade in 3D that well" — a practical call about the right documentation medium for a legal/technical deliverable — 2025-07-28 — [source](https://lionsbot.slack.com/archives/C08LF96PE92/p1753684794699439)
+- **Treated an unfinished design as workable for IP purposes rather than a blocker**: when counsel asked for the "finalized design" of the docking station for patent drafting, Benjamin replied: "The docking station design is still not finalised, but we should still be able to work with what we have. Can you list down the specific items you need first? Then we can let you know." — pushed the conversation toward "what do you actually need" rather than waiting on a moving target — 2026-03-02 — [source](https://lionsbot.slack.com/archives/C08LF96PE92/p1772430067473849)
+
+## Notable Exchanges
+- Benjamin's footprint in this channel is thin — mostly brief scheduling/coordination replies to patent counsel Sachin, plus occasional provision of CAD/photos on request. The channel's substantive IP strategy discussion (e.g., whether to seek design vs. utility protection for the robot's circular-base/on-spot-turning geometry, ahead of a public demo at CMS Berlin) was carried primarily by Wei Hua (design lead) and Joei Wee (PM), not Benjamin — worth flagging so his voice isn't over-represented from this channel alone.
+- One process/security-conscious exchange (not Benjamin) worth noting as channel context: when patent counsel asked for CAD files to be sent to the external firm, Lucas De Rijk raised caution about sending CAD "especially at this early stage," and counsel responded with concrete safeguards (confidentiality-clause engagement letter, marking correspondence confidential/privileged, "Do Not Forward" and expiry settings in Outlook).
+
+## Recurring Themes / Principles Observed
+- Where Benjamin does appear, his instinct is pragmatic and unblocking: pick whatever documentation format actually conveys the needed information (real photos over diagrams for a dynamic/flexing part) and work with an in-progress design by scoping down to what's concretely needed now, rather than waiting for finality.
+
+## Referenced Files (not content-readable)
+- Multiple FTO reports and patent-search PDFs (Suction Filter Assembly, Squeegee blade, Brush cartridge, Docking Station, On-spot turning) shared by patent counsel — not opened, and given IP sensitivity, specific findings are not detailed here.
+- R5_Design_Similarity Search Results.pdf, Docking Station_R5_Patentability Results.docx — preliminary search reports, not opened.
