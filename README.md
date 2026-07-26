@@ -87,6 +87,14 @@ run simply covers a wider window. A failed run deliberately leaves the repo
 untouched — advancing the watermark past unread messages is the one
 unrecoverable failure, so the runner is built to avoid exactly that.
 
+## Adding another person
+
+The repo is built to hold more than one persona. `docs/ADD-A-PERSON.md` is the
+full procedure — a `consult-as-<name>` skill, its own knowledge base, its own
+state file and weekly job, all suffixed by name so nobody's automation can break
+anyone else's. `docs/COLLEAGUE-PROMPT.md` is the prompt to hand a new
+collaborator; they paste it into Claude Code and it works from the procedure.
+
 ## Scope guarantees
 
 - **Channels only.** No DMs are ever read or stored.
