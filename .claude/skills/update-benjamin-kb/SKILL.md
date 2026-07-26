@@ -110,8 +110,8 @@ If — and only if — step 4 produced a REFINES/EVOLVES/NEW finding that change
 how the persona should actually answer, edit
 `.claude/skills/consult-as-benjamin/SKILL.md`. Two sections go stale:
 
-- **`## 4. Then advise, in his register`** — the bullets describing how he
-  decides and how he talks. This is the usual place a style evolution lands.
+- **`## 5. His register`** — the bullets describing how he decides and how he
+  talks. This is the usual place a style evolution lands.
 - **`## 2. Open with intake`** — the scoping questions. If the evidence shows
   the questions he actually asks first have shifted (a new standing concern, a
   constraint he now always checks), update that list.

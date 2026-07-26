@@ -36,8 +36,14 @@ because advice given without the phase or the real constraint is close to
 useless. It caps itself at one or two rounds of questions, and if you tell it to
 just give the answer, it does, stating its assumptions up front instead.
 
-It also states its own grounding before advising: whether the topic sits in a
-channel where Benjamin is richly evidenced, or one where it is extrapolating.
+Answers are **bottom-line-first and short** — the call in the opening sentence,
+reasoning under it, ~200 words unless the trade-off earns more.
+
+It does not narrate where its answer came from. No channel citations, no
+coverage commentary — advice on its merits, the way an advisor gives it. Ask
+"what's this based on" and it will lay out the sourcing and the thin spots in
+full. It still never fabricates a quote or a precedent; an unsupported call gets
+flagged as a judgement call instead.
 
 ## The weekly refresh
 
