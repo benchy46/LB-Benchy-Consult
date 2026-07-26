@@ -9,6 +9,13 @@
     powershell -ExecutionPolicy Bypass -File scripts\weekly-update.ps1 -DryRun
 
   -DryRun does everything except let Claude commit or push.
+
+  NOTE ON ERROR HANDLING: this script deliberately runs with
+  $ErrorActionPreference = 'Continue' and checks $LASTEXITCODE by hand. Under
+  Windows PowerShell 5.1, piping a native exe's stderr (git writes ordinary
+  progress there) wraps each line in an ErrorRecord, which an 'Stop' preference
+  turns into a fatal error even when the exe exited 0. Explicit exit-code checks
+  are the only reliable way to tell real git failures from git being chatty.
 #>
 [CmdletBinding()]
 param(
@@ -16,7 +23,7 @@ param(
     [int]$TimeoutMinutes = 45
 )
 
-$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Continue'
 
 $Repo      = Split-Path -Parent $PSScriptRoot
 $LogDir    = Join-Path $Repo 'logs'
@@ -30,7 +37,16 @@ New-Item -ItemType Directory -Force $LogDir | Out-Null
 
 function Log($msg) {
     $line = "[{0}] {1}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $msg
-    $line | Tee-Object -FilePath $LogFile -Append
+    Write-Host $line
+    Add-Content -Path $LogFile -Value $line -Encoding utf8
+}
+
+# Run git, returning its exit code and text output without letting stderr
+# masquerade as a failure. See the note in the header.
+function Invoke-Git {
+    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$GitArgs)
+    $text = & git $GitArgs 2>&1 | ForEach-Object { $_.ToString() }
+    return [pscustomobject]@{ Code = $LASTEXITCODE; Lines = @($text) }
 }
 
 Log "=== weekly KB update starting (DryRun=$DryRun) ==="
@@ -43,13 +59,15 @@ if (-not (Test-Path $ClaudeExe)) {
 Set-Location $Repo
 
 # --- Sync with remote before doing any work -------------------------------
-# Another machine (or a manual edit on GitHub) may have moved main.
-try {
-    git pull --rebase origin main 2>&1 | ForEach-Object { Log "git: $_" }
-    if ($LASTEXITCODE -ne 0) { throw "git pull --rebase exited $LASTEXITCODE" }
-} catch {
-    Log "FATAL: could not sync with origin/main -- $_"
-    Log "Resolve the working tree by hand; the watermark was not advanced, so no data is lost."
+# Another machine (or an edit made on GitHub) may have moved main.
+# --autostash matters for an unattended job: without it, any stray uncommitted
+# change (including one left behind by a half-finished earlier run) aborts the
+# pull and would wedge the weekly job permanently, failing silently every week.
+$pull = Invoke-Git pull --rebase --autostash origin main
+$pull.Lines | ForEach-Object { Log "git: $_" }
+if ($pull.Code -ne 0) {
+    Log "FATAL: git pull --rebase exited $($pull.Code)."
+    Log "Resolve the working tree by hand. The watermark was not advanced, so no data is lost."
     exit 1
 }
 
@@ -75,7 +93,7 @@ new channels created, and whether principles.md or the consult skill changed.
 "@
 
 $allowed = @(
-    'Read','Write','Edit','Glob','Grep','TodoWrite'
+    'Read', 'Write', 'Edit', 'Glob', 'Grep', 'TodoWrite'
     'Bash(git:*)'
     'mcp__slack__slack_search_public_and_private'
     'mcp__slack__slack_read_thread'
@@ -89,47 +107,63 @@ Log "invoking claude (timeout ${TimeoutMinutes}m)..."
 
 $job = Start-Job -ScriptBlock {
     param($exe, $repo, $prompt, $allowed)
+    $ErrorActionPreference = 'Continue'
     Set-Location $repo
-    & $exe -p $prompt --allowedTools $allowed --permission-mode acceptEdits 2>&1
+    & $exe -p $prompt --allowedTools $allowed --permission-mode acceptEdits 2>&1 |
+        ForEach-Object { $_.ToString() }
+    "___CLAUDE_EXIT___$LASTEXITCODE"
 } -ArgumentList $ClaudeExe, $Repo, $prompt, $allowed
 
-if (Wait-Job $job -Timeout ($TimeoutMinutes * 60)) {
-    Receive-Job $job | ForEach-Object { Log "claude: $_" }
-    $claudeOk = ($job.State -eq 'Completed')
-} else {
+if (-not (Wait-Job $job -Timeout ($TimeoutMinutes * 60))) {
     Stop-Job $job
-    Log "FATAL: claude run exceeded ${TimeoutMinutes} minutes and was killed."
-    Log "Watermark not advanced -- next run will cover the wider window."
     Remove-Job $job -Force
+    Log "FATAL: claude run exceeded $TimeoutMinutes minutes and was killed."
+    Log "Watermark not advanced -- the next run will simply cover a wider window."
     exit 1
+}
+
+$claudeExit = $null
+Receive-Job $job | ForEach-Object {
+    if ($_ -like '___CLAUDE_EXIT___*') {
+        $claudeExit = [int]($_ -replace '___CLAUDE_EXIT___', '')
+    } else {
+        Log "claude: $_"
+    }
 }
 Remove-Job $job -Force
 
-if (-not $claudeOk) {
-    Log "FATAL: claude run did not complete cleanly. Watermark not advanced."
+if ($claudeExit -ne 0) {
+    Log "FATAL: claude exited $claudeExit. Watermark not advanced; repo left as-is."
     exit 1
 }
 
-# --- Verify the run actually landed --------------------------------------
-$state = Get-Content (Join-Path $Repo 'STATE.json') -Raw | ConvertFrom-Json
-Log "STATE.json now: watermark=$($state.watermark_date) runs=$($state.runs)"
+# --- Report what landed ---------------------------------------------------
+$statePath = Join-Path $Repo 'STATE.json'
+if (Test-Path $statePath) {
+    $state = Get-Content $statePath -Raw | ConvertFrom-Json
+    Log "STATE.json now: watermark=$($state.watermark_date) runs=$($state.runs)"
+}
 
-if (-not $DryRun) {
-    $unpushed = git log origin/main..HEAD --oneline 2>$null
-    if ($unpushed) {
-        Log "WARNING: local commits were not pushed:"
-        $unpushed | ForEach-Object { Log "  $_" }
-    }
+if ($DryRun) {
+    $diff = Invoke-Git diff --stat
+    $diff.Lines | ForEach-Object { Log "dryrun-diff: $_" }
+    Log "=== dry run complete; nothing committed, nothing synced ==="
+    exit 0
+}
 
-    # --- Sync the installed skill so the local persona reflects the update ---
-    Log "syncing installed skill -> $InstallTo"
-    robocopy $SkillSrc $InstallTo /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
-    if ($LASTEXITCODE -ge 8) {
-        Log "WARNING: robocopy reported failure code $LASTEXITCODE; installed skill may be stale."
-    } else {
-        Log "installed skill synced."
-    }
-    $global:LASTEXITCODE = 0
+$unpushed = Invoke-Git log 'origin/main..HEAD' --oneline
+if ($unpushed.Code -eq 0 -and $unpushed.Lines.Count -gt 0 -and $unpushed.Lines[0]) {
+    Log "WARNING: local commits were not pushed:"
+    $unpushed.Lines | ForEach-Object { Log "  $_" }
+}
+
+# --- Mirror the skill so the locally installed persona reflects the update ---
+Log "syncing installed skill -> $InstallTo"
+robocopy $SkillSrc $InstallTo /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
+if ($LASTEXITCODE -ge 8) {
+    Log "WARNING: robocopy failure code $LASTEXITCODE; the installed skill may be stale."
+} else {
+    Log "installed skill synced."
 }
 
 # --- Prune old logs -------------------------------------------------------
