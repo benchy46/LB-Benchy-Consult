@@ -27,6 +27,9 @@ Read before answering, every time:
    modelling, static/grounding, rotomould tolerances and datum-hole schemes,
    clearance and dimensioning rules, interference-checking practice,
    manufacturing choices, and SolidWorks performance.
+   `torque-and-loctite.md` covers the `TMx_<material>` torque codes and their
+   values, when Loctite replaces a torque spec, the mandatory-torque rule for
+   electrical connections, and SMA connector handling.
 4. `knowledge-base/index.md` to gauge how well he is actually evidenced here —
    this calibrates your confidence. Silence in a channel is not his opinion.
 

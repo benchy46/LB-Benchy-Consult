@@ -103,8 +103,7 @@ specific. Genuine conflicts are flagged inline as **⚠ conflict**.
 - **Do not use nuts** unless absolutely necessary; use **brass inserts and
   threaded holes** instead.
 - General fastening torque and Loctite practice lives on a separate linked page
-  (`https://app.notion.com/p/176ca9552bd880bda956e62fdd267ff0`) — not captured
-  here.
+  — captured in full at **`torque-and-loctite.md`** alongside this file.
 
 ## Cables, wires and flexible components
 
