@@ -4,7 +4,7 @@
 
 This knowledge base was built to let Claude "consult like Benjamin" — i.e. reason about engineering, ops, and design decisions the way Chay Wai Peng Benjamin ("Benjamin Chay," Slack user ID `U01BJHTFR70`, benjamin@lionsbot.com) actually does, based on his real, recorded judgment calls rather than a generic persona.
 
-It was built by extracting roughly **two years of Slack history** (2024-07-26 through 2026-07-26) across **50 team channels** at LionsBot, a robotics company. Extraction was split across 7 parallel agents, each producing one markdown file per channel in `channels/`.
+It was built by extracting roughly **two years of Slack history** (2024-07-26 through 2026-07-26) across **50 team channels** at LionsBot, a robotics company. Extraction was split across 7 parallel agents, each producing one markdown file per channel in `channels/`. It is kept current by a weekly incremental refresh (see `../../../../CHANGELOG.md` and `STATE.json` at the repo root); **4 further channels were added on 2026-08-10**, bringing the total to 54.
 
 **Scope and limits of the source material:**
 - Public/private **channels only** — no DMs were read or included.
@@ -43,6 +43,10 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `r5-ops.md` | **Moderate** | Occasional but pointed spec/QC decisions fielding floor questions. |
 | `r5-dv04-changes.md` | **Moderate** | Several precise, build-phase-scoped engineering calls. |
 | `r5-docking-trolley.md` | **Moderate** | Tagged on nearly every CAD review; posts targeted catches rather than full reviews. |
+| `internal_product_mech.md` | **Rich** *(added 2026-08-10)* | His own team-ops channel and the primary source for shared-facility/CAD-infrastructure stewardship. Partial coverage — last ~3 months only. |
+| `r5-development.md` | **Rich** *(added 2026-08-10)* | Dense cross-discipline reasoning (dry-patch geometry, direct-vs-indirect detection, field-fix effort equivalence). Partial coverage. |
+| `s3-development.md` | **Rich** *(added 2026-08-10)* | Where his mechanical judgment meets autonomy/embedded; notably non-directive register. Partial coverage. |
+| `r5-mech-architecture.md` | **Moderate–Rich** *(added 2026-08-10)* | Short adjudications inside others' threads; good option-set and phase-gate examples. Partial coverage. |
 | `s3-mech-cad-changelog.md` | **Moderate (bot-mediated)** | Only bot-generated CAD-rollup summaries "Sent using @ak_Claude" — useful as behavioral evidence, not free-form voice. |
 | `temp-r5-traction-motor-friction.md` | **Moderate** | Light direct participation; precise spec corrections. |
 | `traction-motor-issue.md` | **Moderate** | Mostly tagged for input; a couple of verification-before-judgment exchanges. |
@@ -79,7 +83,7 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `temp-r5-dv02-convert-to-dv03.md` | **Empty (for him)** | Joined only; conversion work driven by others. |
 | `vp25-eng-scm.md` | **Empty (for him)** | Named at channel founding, but zero authored messages found. |
 
-**Rough shape:** of the 50 channels, roughly 13 are rich-to-moderate-rich sources of his direct voice, another ~10 are moderate/thin-but-real, and the remaining ~27 have little-to-no first-person Benjamin content (either genuinely empty/dead channels, or channels where he's a named point of contact who didn't visibly reply in the captured window). That skew is itself informative: his active, hands-on engineering voice concentrates heavily in mechanical-design and hardware-failure-investigation channels (S3 handlebar/chassis, R5 wheel-slip/molding/planning, traction-motor incidents, Omega docking-station production) and in the AI-tooling and mech-leads channels he personally drives — and is comparatively absent from pure supply-chain/logistics/shipment and IP-strategy channels, where he's more often a named stakeholder than an active participant.
+**Rough shape:** of the 54 channels, roughly 17 are rich-to-moderate-rich sources of his direct voice, another ~10 are moderate/thin-but-real, and the remaining ~27 have little-to-no first-person Benjamin content (either genuinely empty/dead channels, or channels where he's a named point of contact who didn't visibly reply in the captured window). That skew is itself informative: his active, hands-on engineering voice concentrates heavily in mechanical-design and hardware-failure-investigation channels (S3 handlebar/chassis, R5 wheel-slip/molding/planning, traction-motor incidents, Omega docking-station production) and in the AI-tooling and mech-leads channels he personally drives — and is comparatively absent from pure supply-chain/logistics/shipment and IP-strategy channels, where he's more often a named stakeholder than an active participant.
 
 ## Known gaps and limitations
 
@@ -90,3 +94,5 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 - **Multi-agent extraction variance.** The 50 files were produced by 7 different agents working in parallel. All follow the same section template, but depth of investigation, sampling strategy for very high-volume channels (some channels note they were sampled/paginated rather than read message-by-message in full), and tone of the "Recurring Themes" write-ups vary somewhat between files.
 - **Survivorship/selection bias toward channels he actively used.** Because many channels show him as tagged-but-silent, this knowledge base is much stronger on *how he solves problems and talks when he does engage* than on *whether/how he handles requests he doesn't respond to* — the latter is largely invisible here.
 - **Temporal skew.** Some of his richest channels (S3 program) are recent (2026), meaning the picture may lean toward his current working style more than his style from 2024–2025, even though earlier channels (Omega/mech-leads) are also well represented.
+- **The seed's channel list was not complete.** The 2026-08-10 refresh discovered four active, substantive channels absent from the original 50 — `internal_product_mech`, `r5-development`, `s3-development`, `r5-mech-architecture` — one of which (`internal_product_mech`) carries a whole facet of his role (shared-facility and CAD-infrastructure stewardship) that was otherwise invisible. Assume further gaps exist; the weekly refresh discovers new channels only when he posts in them during the window, so a channel he was active in *before* the seed and quiet in *since* would still be missing.
+- **The four channels added on 2026-08-10 have partial coverage only** — each was built from a targeted search of his most recent ~20 messages plus selected threads, not a full history sweep. Their coverage notes say so individually. They are reliable as far as they go, but absence of a topic in those four files is not evidence he never discussed it.
