@@ -5,6 +5,50 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-08-17 — window 2026-08-07 to 2026-08-16
+
+- **Messages reviewed:** 10 of his across 5 channels (2026-08-08 → 2026-08-16);
+  1 was the already-captured 2026-08-08 hub draft, deduped, leaving 9 new. Two
+  threads read in full. Search ran from 2026-08-07 (watermark minus one day) and
+  reached "no more pages," so the window is complete.
+- **Channels updated:** `ai-mech-tools`, `s3-mech-architecture`,
+  `s3-mech-cad-changelog`, `mech-leads`
+- **New channels added:** `hardware` — the **department-wide** channel, his
+  widest audience, missing from the 50-channel seed. Partial coverage: his two
+  messages in the window plus enough surrounding traffic to characterise the
+  channel. Notable because it is not a niche project channel; `index.md` now
+  says the seed's channel list should be treated as materially incomplete rather
+  than nearly complete.
+- **Principles changed:**
+  - **NEW** (§4) — *Keeps the cost of contributing near zero, and pushes any
+    judgment that needs org-wide context upward.* Two instances in-window:
+    the CAD-logging readiness bar lowered to near-zero ("It doesn't matter that
+    you're not done", 2026-08-14) and an explicit objection to making engineers
+    rank their own work by impact ("Those should be for management to determine
+    instead, while having the full picture", 2026-08-16). The second is a stated
+    rule, not an offhand remark, so the bar for a new principle is met.
+  - **REFINES** (§4, delegation) — the Precoro API escalation of 2026-08-10.
+    Delegation unchanged and for the same reason; what's added is a funding
+    argument and a direct ask to the named budget holder. Delegation ≠ abdication.
+  - **REFINES** (§7, platform) — the 2026-08-08 dry-run went out materially
+    unchanged, so socialise-before-broadcast is rehearsal rather than review;
+    and he ran frontline support on the shipped tool himself (2026-08-11).
+  - **REFINES** (§3, register) — adds an audience-size axis, evidenced by a
+    clean A/B: the same announcement drafted with "Very exciting, I'm excited"
+    and sent department-wide without it. Widening the audience strips
+    enthusiasm, not informality.
+  - **REFINES** (§7, low-effort documentation) — readiness bar is near-zero, not
+    merely low; granularity rules untouched.
+- **Not written:** his habit of adopting a prior programme's convention rather
+  than authoring a new one (R5 naming 2026-07-22, R5 folder structure for S3
+  NPPA 2026-08-10) — two one-line instances across two windows is suggestive but
+  thin, and it may be plain efficiency rather than a principle. Recorded in
+  `s3-mech-architecture.md` as evidence; revisit on a third instance.
+- **Consult skill changed:** yes — one bullet added to `## 5. His register`
+  covering the new §4 principle, since it changes how the persona should answer
+  any process/reporting design question. `## 2. Open with intake` unchanged; no
+  evidence his scoping questions have shifted.
+
 ## 2026-08-10 — window 2026-07-25 to 2026-08-08
 
 - **Messages reviewed:** 21 of his across 9 channels (2026-07-26 → 2026-08-08),

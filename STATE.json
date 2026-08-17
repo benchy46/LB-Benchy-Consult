@@ -1,8 +1,8 @@
 {
   "_comment": "Watermark for the weekly incremental Slack refresh. watermark_date is the date of the newest Slack message already folded into the knowledge base. The updater searches from one day BEFORE this and dedupes, so a missed week self-heals into a wider window on the next run. Do not hand-advance this past unread messages.",
   "benjamin_slack_user_id": "U01BJHTFR70",
-  "watermark_date": "2026-08-08",
-  "last_run_utc": "2026-08-10T00:17:47Z",
-  "runs": 1,
+  "watermark_date": "2026-08-16",
+  "last_run_utc": "2026-08-17T00:19:32Z",
+  "runs": 2,
   "seeded_from": "initial 2-year sweep, 2024-07-26 through 2026-07-26, 50 channels"
 }

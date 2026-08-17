@@ -15,6 +15,12 @@ Benjamin's only footprint in this channel is a small number of bot-generated "in
 
 Both are posted under his user ID (unlike the earlier three, these carry no "Sent using @ak_Claude" tag in the captured text, though the format is identical and the automation is presumably the same). Still no manually-typed design reasoning from Benjamin in this channel.
 
+**[2026-08-17 refresh] The DV series continued, and the cadence tightened to two rollups in one day:**
+- **2026-08-11 (10:06)** — `S3 Integrated DV_260811`: "Traction Motor Mount SA swapped to DV Rev 02, Traction Mounts Left and RightRev 03.SLDASM; other 7 subassemblies unchanged." — [source](https://lionsbot.slack.com/archives/C0B3E13N58V/p1786413981652059)
+- **2026-08-11 (14:37)** — `S3 Integrated DV_260811_I`: "two NEW subassemblies added: Chassis ASM (Chassis Weldment updated for DV00260807.SLDASM) and Tank/Body (Main Body asm 260811, Rev 5); other 8 subassemblies unchanged. Now 10 subassemblies / 355 components." — [source](https://lionsbot.slack.com/archives/C0B3E13N58V/p1786430260848279)
+
+Three things are consistent enough by now to read as deliberate practice rather than coincidence: (1) **the unchanged set is always named and counted** — "other 7", "other 8" — so a reader can trust what did *not* move without re-checking it, the same tell noted on 2026-08-03; (2) **a same-day `_I` revision is a normal, non-exceptional event** rather than a correction (also seen 2026-07-07), i.e. he re-rolls the integrated assembly as soon as a subassembly lands instead of batching to a weekly cut; (3) **a running total is carried** (10 subassemblies / 355 components), giving the series a scalar that would make a silent drop visible. Worth noting the component count *fell* from the 471 of `AI_260708` — this is a different, Stage-5 baseline being rebuilt subassembly-by-subassembly, not a regression.
+
 ## Notable Exchanges
 None involving Benjamin directly (aside from Jack Dyer once addressing him in a chassis-CAD update note on 2026-06-22: "it should address the side panel requests you made" — this is Jack's statement about incorporating Benjamin's earlier request, not Benjamin's own words).
 
@@ -26,4 +32,4 @@ None involving Benjamin directly (aside from Jack Dyer once addressing him in a 
 - `S3 Integrated AI_260708` / `_260707_I` / `_260707` — full-robot parasolid + pack-and-go integrated CAD assemblies (M:\S3\Stage 4 Engineering Verification & Validation\EVMR\WIP\Full Robot\...). Contents not accessible via Slack.
 
 ## Coverage note
-Full channel history read (created 2026-05-13, channel is a single-page dump of 100 messages spanning 2026-05-13 to 2026-07-24); confirmed no further pagination. **Extended 2026-08-10** with his two Stage-5/DV rollups (2026-07-29, 2026-08-03). The channel is dominated by non-Benjamin, bot-generated per-subassembly changelog notices (Chassis, Subframe, Ebox, Side Brush, Handlebar, Hopper, etc.) from a Notion "Subassembly Version Tracker" integration; only 3 substantive (bot-authored-on-his-behalf) messages and 1 join notice belong to Benjamin.
+Full channel history read (created 2026-05-13, channel is a single-page dump of 100 messages spanning 2026-05-13 to 2026-07-24); confirmed no further pagination. **Extended 2026-08-10** with his two Stage-5/DV rollups (2026-07-29, 2026-08-03), and **again 2026-08-17** with two more (both 2026-08-11). The channel is dominated by non-Benjamin, bot-generated per-subassembly changelog notices (Chassis, Subframe, Ebox, Side Brush, Handlebar, Hopper, etc.) from a Notion "Subassembly Version Tracker" integration; only 3 substantive (bot-authored-on-his-behalf) messages and 1 join notice belong to Benjamin.
