@@ -5,6 +5,86 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-08-31 — window 2026-08-16 to 2026-08-29
+
+**Two-week window.** The scheduled 2026-08-24 run failed before doing any work
+(`claude` exited 1: "OAuth session expired and could not be refreshed"), so the
+watermark was correctly left at 2026-08-16 and this run covers both weeks. The
+self-healing behaviour worked as designed — no gap.
+
+- **Messages reviewed:** 48 of his across 12 channels (2026-08-16 → 2026-08-29);
+  1 was the already-captured 2026-08-16 `mech-leads` weekly-updates message,
+  deduped, leaving 47 new. Search ran from 2026-08-15 (watermark minus one day),
+  paged to "End of results." Six threads read in full. One channel (`tapao-food`,
+  one message: "Not today") was reviewed and skipped as pure logistics.
+- **Channels updated:** `s3-development`, `s3-handlebar`, `s3-mech-architecture`,
+  `s3-chassis-and-brush-assemblies`, `s3-mech-cad-changelog`, `mech-leads`,
+  `ai-mech-tools`, `r5-development`, `r5-docking-trolley`
+- **New channels added:** `engineering` — another long-running **workspace-wide**
+  channel absent from the seed (one message; very partial coverage). And
+  `s3-rnd-scm-approval`, the R&D→SCM purchasing gate, kept deliberately thin
+  because most of its content is quotes and pricing and is filtered out of scope.
+  Two consecutive refreshes each finding a department-scale channel is now noted
+  in `index.md` as a structural gap, not a one-off: broad channels where he posts
+  rarely are exactly what a per-window search of his own messages keeps missing.
+  Total channels 55 → 57.
+- **Principles changed:**
+  - **REFINES → correction** (§1 + summary, evidence 2026-08-18) — the standing
+    "prefers cheap software/signal fixes to new hardware" reading was too narrow
+    and would have produced the wrong advice. Asked what software should do when
+    the S3 HEPA filter is missing, he removed the premise — "the hopper should
+    not be able to be inserted if there is no filter. So if that works, then
+    software side is not required to do anything" — and the team cancelled the
+    detection workflow and slated the sensor for removal. The invariant is
+    *add no new part and no new code*; geometry wins when geometry is already
+    being designed. The FMEA-detection-scoring exception is unchanged.
+  - **NEW** (§1, evidence 2026-08-18 and 08-27) — checks whether the failing
+    requirement is real before treating the failure as a problem: "very very
+    likely we will not need max speed", then "we do not need high update rate,
+    so if the sonar gives a good reading once a min, it is also acceptable".
+    Two instances on one fault, plus explicit peer pushback (WeiTong: "we do not
+    know the root cause") which he answered with a test plan rather than a
+    defence — so spec relaxation runs *parallel* to root cause, not instead.
+  - **NEW** (§1, evidence 2026-08-19) — isolation experiments where each step
+    changes one variable and names what it rules in or out, including a control
+    with no hypothesis attached ("to make sure we are not missing anything").
+  - **NEW** (§6, evidence 2026-08-17) — on a price increase he ring-fences the
+    feature a past field failure made mandatory ("don't wanna regress"), prices
+    anything above that floor, and tests it by converting the delta into a value
+    question ("is it 78.9% nicer?"). A clean A/B on what persuades him: the
+    positional argument ("HMI is ranked by sales as the #1 top design factor")
+    drew no reply; the service-life argument flipped him in one line ("Hmm true
+    that it is scratch resistant also. Well okay i buy that").
+  - **REFINES** (§4, evidence 2026-08-24/27/28) — the format-vs-completeness
+    split now has a mechanism: the rules he enforces are exactly the ones a
+    downstream machine breaks on. SKU/description/CAPS mandatory, status field
+    optional, and file naming explicitly waived ("file name doesnt matter"),
+    completeness waived again ("It doesn't matter if your stuff isn't fully
+    finished"). Predictive test added: *would a script fail on this?*
+  - **REINFORCES** (§7) — the platform posture holds and widens (Precoro spec'd
+    as a hosted web app; metadata discipline aimed at an auto-export agent), and
+    he now publishes his own automation's **failures** in the same channel and
+    format as its successes (Pack and Go blocked, 2026-08-26 / 08-29): root
+    cause, what is still deliverable, whose court the fix is in, and a
+    pre-empted misread ("Not a regression from this update").
+  - **Dated constraint recorded** (§5, evidence 2026-08-26, not his own words) —
+    supplier *pricing* was formally moved from engineers to SCM ("From now on -
+    R&D will share the engineering drawings - Eric will deal the quotation").
+    His technical supplier pushback is untouched; pre-2026-08-26 examples of him
+    working a price directly are now historical, not current practice.
+  - Recorded in channel files only, below the bar for `principles.md`: Singlish
+    register with juniors framed as protecting their time ("dont anyhow try
+    different teeth, let me know first so you no need waste time", 2026-08-18);
+    accepting a large SW2026/Windchill migration task with one unblocking
+    question and no negotiation (2026-08-26); a near-verbatim repeat of the
+    July childcare-leave notice (2026-08-25).
+- **Consult skill changed:** yes. `§2 Open with intake` — the boundary question
+  now also asks whether the failing requirement is firm. `§5 His register` —
+  the "prefer inferring from existing signals" bullet rewritten to the
+  no-new-part-and-no-new-code rule with the poka-yoke case; new bullet on
+  relaxing the spec in parallel with isolating the variable; new bullet on how
+  he handles a price increase.
+
 ## 2026-08-17 — window 2026-08-07 to 2026-08-16
 
 - **Messages reviewed:** 10 of his across 5 channels (2026-08-08 → 2026-08-16);
