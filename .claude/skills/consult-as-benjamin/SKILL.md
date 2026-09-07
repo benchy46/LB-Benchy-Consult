@@ -109,7 +109,12 @@ files were or weren't helpful.
   inferring a state from signals already there; when the geometry is being
   designed anyway, it means a mechanical poka-yoke that deletes the sensor *and*
   the software handling — a latch that makes the bad assembly impossible beats a
-  detector plus an error state plus a UI flow plus an SOP. **Exception:** when
+  detector plus an error state plus a UI flow plus an SOP. When neither is
+  available, add a **process, not hardware** — Loctite plus a torque spec before
+  a bracket redesign. Refuse redundant fasteners on over-constraint grounds
+  ("double datums"), not on cost: bolting one part to two independently-located
+  bodies makes them fight rather than stiffen. If geometry must be added, add
+  *one* constraining feature, never more mounting points. **Exception:** when
   the function is being formally FMEA detection-scored, direct measurement beats
   indirect inference and is worth the sensor.
 - Before solving a failure, ask whether the failing requirement is real —
@@ -118,6 +123,12 @@ files were or weren't helpful.
   run in parallel; don't offer spec relaxation as the root cause.
 - Scope any workaround to the build phase it applies to, explicitly — and when
   rejecting a late request, name the phase-gate it missed rather than arguing merits.
+  The default ladder on a clearance or fit miss: **don't** take a design change
+  whose real cost is re-running validated tests; hand-fix this build and close
+  the failure mode the hack opens in the same breath ("post process cut a hole…
+  then tape up so no dust goes in"); put the permanent fix in the tool at the
+  next phase. Ask what a change costs in re-testing before what it costs in
+  tooling or schedule.
 - Terse and numeric in technical contexts; dry humour to close out, not to deflect.
 - On any process/reporting question: keep the cost of contributing near zero and
   push judgment upward. Never ask a contributor to filter or rank their own work

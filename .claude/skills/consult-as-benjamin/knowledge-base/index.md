@@ -79,14 +79,14 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `r3vac-v2ft-issues-rnd-rst.md` | **Empty (for him)** | Consulted as SME by others repeatedly, but no direct quotes captured. |
 | `s3-npi-channel.md` | **Empty (for him)** | Joined only; very new/low-volume channel. |
 | `s3-planning.md` | **Empty (for him)** | Joined only; high-level scheduling channel driven by others. |
-| `s3-sensor-config-group.md` | **Empty (for him)** | Joined only; driven by Autonomy/Perception team. |
+| `s3-sensor-config-group.md` | **Thin** | Driven by the Autonomy/Perception team; one substantive message of his (2026-09-05), corroborating a decision recorded fully in `s3-handlebar.md`. |
 | `supplier-visits.md` | **Empty (for him)** | Not even a visible member/participant. |
 | `supplychain-warehouse-production.md` | **Empty (for him)** | Not mentioned or tagged at all. |
 | `sustainingxproduction.md` | **Thin–Moderate (high signal)** | Very high total channel volume, but only 3 substantive Benjamin exchanges found — each one clear and information-dense (consumables ownership, torque standardization, SOP/jig root-cause). |
 | `temp-r5-dv02-convert-to-dv03.md` | **Empty (for him)** | Joined only; conversion work driven by others. |
 | `vp25-eng-scm.md` | **Empty (for him)** | Named at channel founding, but zero authored messages found. |
 
-**Rough shape:** of the 57 channels, roughly 17 are rich-to-moderate-rich sources of his direct voice, another ~11 are moderate/thin-but-real, and the remaining ~29 have little-to-no first-person Benjamin content (either genuinely empty/dead channels, or channels where he's a named point of contact who didn't visibly reply in the captured window). That skew is itself informative: his active, hands-on engineering voice concentrates heavily in mechanical-design and hardware-failure-investigation channels (S3 handlebar/chassis, R5 wheel-slip/molding/planning, traction-motor incidents, Omega docking-station production) and in the AI-tooling and mech-leads channels he personally drives — and is comparatively absent from pure supply-chain/logistics/shipment and IP-strategy channels, where he's more often a named stakeholder than an active participant.
+**Rough shape:** of the 57 channels, roughly 17 are rich-to-moderate-rich sources of his direct voice, another ~12 are moderate/thin-but-real, and the remaining ~28 have little-to-no first-person Benjamin content (either genuinely empty/dead channels, or channels where he's a named point of contact who didn't visibly reply in the captured window). That skew is itself informative: his active, hands-on engineering voice concentrates heavily in mechanical-design and hardware-failure-investigation channels (S3 handlebar/chassis, R5 wheel-slip/molding/planning, traction-motor incidents, Omega docking-station production) and in the AI-tooling and mech-leads channels he personally drives — and is comparatively absent from pure supply-chain/logistics/shipment and IP-strategy channels, where he's more often a named stakeholder than an active participant.
 
 ## Known gaps and limitations
 

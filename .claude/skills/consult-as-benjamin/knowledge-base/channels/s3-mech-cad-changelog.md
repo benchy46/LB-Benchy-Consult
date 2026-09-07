@@ -32,6 +32,12 @@ The failure notes are the new thing and they follow his standing shape for infra
 
 *No permalinks captured for these five messages.*
 
+**[2026-09-07 refresh] The first manually-typed, substantive Benjamin message in this channel — and it is an ownership map, not a CAD export:**
+- **2026-09-03 (21:02)** — the "ONE PACKAGE into mech drive" assembly-ownership list, thirteen assemblies against seven named owners, then reposted four minutes later to [#s3-mech-architecture](./s3-mech-architecture.md) — where the full text and analysis are recorded — with one line added there that is absent here, an ask to Hisham to push his CAD to the relevant owners. Posting it *here* as well as there is deliberate: this is the channel where the per-subassembly tracker notices land, so the map and the stream it governs sit in the same place. He also notes "Notion Subassembly drop down has been adjusted accordingly" — the packages he just named are now the only options the form offers, so the map is enforced at the point of entry rather than by reminder. — [source](https://lionsbot.slack.com/archives/C0B3E13N58V/p1788440562267689)
+
+Two related notes on the channel's own machinery. The **auto-posting is opt-in per entry** as of 2026-08-31 — the tracker's new "Send Update" checkbox is what fires the Slack notice, so an engineer can draft a revision row without broadcasting it (`s3-mech-architecture.md`, 2026-08-31); read a gap in this channel's traffic as possibly an unticked box rather than an absent upload. And **no integrated-CAD rollup was posted between 2026-08-29 and 2026-09-05** — the longest gap in the DV series to date, coinciding with him being on medical leave on 09-03 and 09-04 (`mech-leads.md`). The rollup is a manually-triggered job of his, not a scheduled one.
+
+
 ## Notable Exchanges
 None involving Benjamin directly (aside from Jack Dyer once addressing him in a chassis-CAD update note on 2026-06-22: "it should address the side panel requests you made" — this is Jack's statement about incorporating Benjamin's earlier request, not Benjamin's own words).
 
@@ -43,4 +49,4 @@ None involving Benjamin directly (aside from Jack Dyer once addressing him in a 
 - `S3 Integrated AI_260708` / `_260707_I` / `_260707` — full-robot parasolid + pack-and-go integrated CAD assemblies (M:\S3\Stage 4 Engineering Verification & Validation\EVMR\WIP\Full Robot\...). Contents not accessible via Slack.
 
 ## Coverage note
-Full channel history read (created 2026-05-13, channel is a single-page dump of 100 messages spanning 2026-05-13 to 2026-07-24); confirmed no further pagination. **Extended 2026-08-10** with his two Stage-5/DV rollups (2026-07-29, 2026-08-03), and **again 2026-08-17** with two more (both 2026-08-11). The channel is dominated by non-Benjamin, bot-generated per-subassembly changelog notices (Chassis, Subframe, Ebox, Side Brush, Handlebar, Hopper, etc.) from a Notion "Subassembly Version Tracker" integration; only 3 substantive (bot-authored-on-his-behalf) messages and 1 join notice belong to Benjamin.
+Full channel history read (created 2026-05-13, channel is a single-page dump of 100 messages spanning 2026-05-13 to 2026-07-24); confirmed no further pagination. **Extended 2026-08-10** with his two Stage-5/DV rollups (2026-07-29, 2026-08-03), and **again 2026-08-17** with two more (both 2026-08-11). The channel is dominated by non-Benjamin, bot-generated per-subassembly changelog notices (Chassis, Subframe, Ebox, Side Brush, Handlebar, Hopper, etc.) from a Notion "Subassembly Version Tracker" integration; only 3 substantive (bot-authored-on-his-behalf) messages and 1 join notice belong to Benjamin. **Extended 2026-09-07** with the 2026-09-03 assembly-ownership post — his first hand-typed substantive message here.

@@ -5,6 +5,55 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-09-07 — window 2026-08-31 to 2026-09-05
+
+- **Messages reviewed:** 23 of his across 9 channels, searched from 2026-08-28
+  (watermark minus one day) and paged to "End of results." Two were the
+  already-captured 2026-08-29 `s3-mech-cad-changelog` rollup and its Pack-and-Go
+  failure note — deduped, leaving 21 new across 8 channels. Five threads read in
+  full. Two items reviewed and excluded: an `s3-rnd-scm-approval` payment chase
+  ("That one paid already?", financial, out of scope per guardrail 4) and two
+  `mech-leads` medical-leave notices, which are logistics and stayed out of the
+  Decisions sections but are recorded in `mech-leads.md` for the register read.
+- **Channels updated:** `s3-handlebar` (4 entries), `s3-mech-architecture` (4),
+  `s3-chassis-and-brush-assemblies` (1), `s3-sensor-config-group` (1),
+  `s3-mech-cad-changelog` (1), `exhibitions-around-the-world` (1), `mech-leads` (1).
+- **New channels added:** none. `s3-sensor-config-group` was reclassified in
+  `index.md` from **Empty (for him)** to **Thin** — his first substantive message
+  there lands 2026-09-05, 15 months after he joined.
+- **Principles changed:** four REFINES, no EVOLVES, no NEW.
+  - §1 — the "no new part, no new code" ladder gained its bottom rung: with
+    nothing in the design able to carry the function he adds a *process*, not
+    hardware (Loctite + torque spec), and refuses redundant fasteners on
+    over-constraint grounds rather than cost — "There would be issues with Double
+    datums so it isn't possible" (2026-09-04, corroborated 2026-09-05).
+  - §6 — build-phase scoping resolved into an explicit three-rung ladder, with
+    the protected cost named as **completed validation work**: refuse the design
+    change that forces re-testing, hand-fix this build while closing the failure
+    mode the hack opens, tool the permanent fix next phase (2026-09-04).
+  - §4 — the "raise the unit of chasing" trajectory (2026-08-24 → 08-27) landed
+    in a 13-assembly / 7-named-owner package map with enforcement moved into the
+    Notion dropdown, tightening *who* without raising the effort bar (2026-09-03).
+  - §7 — the stopgap-vs-intended-solution separation acquired a structural form:
+    one issue ledger per build phase running concurrently, filed by the phase at
+    which a fix becomes possible (2026-09-04); plus the CAD Change Tracker
+    auto-fill and its draft/publish gate (2026-08-31).
+- **Standards note:** his twice-stated "loctite **plus** torque wrench" exercises
+  the documented exception in `reference/torque-and-loctite.md`, whose default for
+  aluminium/stainless threads is Loctite *instead of* a torque value. Not a
+  contradiction, so the reference file was left untouched per guardrail 6 — but
+  what triggers the exception is now recorded in `s3-handlebar.md`: a joint whose
+  slow loosening degrades sensor calibration without ever presenting as a loose
+  screw.
+- **Consult skill changed:** yes — two amendments to `## 5. His register`: the
+  process-before-hardware rung with the over-constraint refusal, and the
+  clearance/fit ladder with "ask what a change costs in re-testing first."
+  `## 2. Open with intake` unchanged.
+- **Not elevated to a principle (single instance, recorded in channel files
+  only):** he issued design rulings on both days of medical leave while his
+  integrated-CAD rollup was the thing that actually slipped — the longest gap in
+  the DV series to date (`mech-leads.md`, `s3-mech-cad-changelog.md`).
+
 ## 2026-08-31 — window 2026-08-16 to 2026-08-29
 
 **Two-week window.** The scheduled 2026-08-24 run failed before doing any work
