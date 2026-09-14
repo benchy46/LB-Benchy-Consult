@@ -4,7 +4,7 @@
 
 This knowledge base was built to let Claude "consult like Benjamin" — i.e. reason about engineering, ops, and design decisions the way Chay Wai Peng Benjamin ("Benjamin Chay," Slack user ID `U01BJHTFR70`, benjamin@lionsbot.com) actually does, based on his real, recorded judgment calls rather than a generic persona.
 
-It was built by extracting roughly **two years of Slack history** (2024-07-26 through 2026-07-26) across **50 team channels** at LionsBot, a robotics company. Extraction was split across 7 parallel agents, each producing one markdown file per channel in `channels/`. It is kept current by a weekly incremental refresh (see `../../../../CHANGELOG.md` and `STATE.json` at the repo root); **4 further channels were added on 2026-08-10**, `#hardware` on **2026-08-17**, and `#engineering` + `#s3-rnd-scm-approval` on **2026-08-31**, bringing the total to 57.
+It was built by extracting roughly **two years of Slack history** (2024-07-26 through 2026-07-26) across **50 team channels** at LionsBot, a robotics company. Extraction was split across 7 parallel agents, each producing one markdown file per channel in `channels/`. It is kept current by a weekly incremental refresh (see `../../../../CHANGELOG.md` and `STATE.json` at the repo root); **4 further channels were added on 2026-08-10**, `#hardware` on **2026-08-17**, and `#engineering` + `#s3-rnd-scm-approval` on **2026-08-31**, bringing the total to 57. No new channels since; the **2026-09-14** refresh added no files but moved three existing ones up the substantiveness scale (`s3-rnd-scm-approval`, `s3-npi-channel`, `s3-mech-cad-changelog`).
 
 **Scope and limits of the source material:**
 - Public/private **channels only** — no DMs were read or included.
@@ -47,7 +47,7 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `r5-development.md` | **Rich** *(added 2026-08-10)* | Dense cross-discipline reasoning (dry-patch geometry, direct-vs-indirect detection, field-fix effort equivalence). Partial coverage. |
 | `s3-development.md` | **Rich** *(added 2026-08-10)* | Where his mechanical judgment meets autonomy/embedded; notably non-directive register. Partial coverage. |
 | `r5-mech-architecture.md` | **Moderate–Rich** *(added 2026-08-10)* | Short adjudications inside others' threads; good option-set and phase-gate examples. Partial coverage. |
-| `s3-mech-cad-changelog.md` | **Moderate (bot-mediated)** | Only bot-generated CAD-rollup summaries "Sent using @ak_Claude" — useful as behavioral evidence, not free-form voice. |
+| `s3-mech-cad-changelog.md` | **Moderate** *(upgraded 2026-09-14)* | Mostly his integrated-CAD rollups — originally bot-mediated ("Sent using @ak_Claude"), now carrying hand-written flags, root-cause notes on the chronic Pack-and-Go failure, and a public self-correction. The best record of how he reports his own tooling's failures. |
 | `temp-r5-traction-motor-friction.md` | **Moderate** | Light direct participation; precise spec corrections. |
 | `traction-motor-issue.md` | **Moderate** | Mostly tagged for input; a couple of verification-before-judgment exchanges. |
 | `ip-rnd.md` | **Moderate** | Secondary voice to patent counsel/Lucas; his own scoped contributions on the squeegee patent. |
@@ -57,7 +57,7 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `s3-chassis-and-brush-assemblies.md` | **Moderate-thin** | Founding member; mostly short coordination asks, design work happens elsewhere. |
 | `hardware.md` | **Thin so far (broadcast register)** *(added 2026-08-17)* | The department-wide channel — his widest audience. Two messages captured: the Hardware Tools Hub launch and a one-line support reply on it. Valuable as evidence of how his register changes for a large audience, not as design reasoning. Partial coverage — one week only, channel long predates it. |
 | `engineering.md` | **Very thin** *(added 2026-08-31)* | Another long-running **department-scale** channel (one of the oldest in the workspace) missed by the seed. One message captured — a fastener-recognition call ruling a field-found screw out of the product. Very partial coverage; do not treat one message as representative. |
-| `s3-rnd-scm-approval.md` | **Thin (heavily filtered by design)** *(added 2026-08-31)* | The R&D→SCM purchasing approval gate for S3. Content is predominantly quotes/prices/requisitions and is excluded by scope, so little of his voice survives. Kept for two contextual facts: the approval path S3 hardware takes, and the 2026-08-26 ruling moving price negotiation from engineers to SCM. |
+| `s3-rnd-scm-approval.md` | **Thin (heavily filtered by design)** *(added 2026-08-31)* | The R&D→SCM purchasing approval gate for S3. Content is predominantly quotes/prices/requisitions and is excluded by scope, so little of his voice survives. Kept for two contextual facts: the approval path S3 hardware takes, and the 2026-08-26 ruling moving price negotiation from engineers to SCM. *(Upgraded toward **Moderate** 2026-09-14: from 2026-09-09 he posts a consistent, price-free part-revision notification template here several times a week — real voice that survives the filter.)* |
 | `r5-product-innovation-ip.md` | **Thin** | Sparse, mostly logistical; IP strategy driven by others. |
 | `r5-trials-overseas.md` | **Thin** | Exactly one substantive message (HEPA mold mitigation) in a very high-volume channel. |
 | `design_for_ux_committee.md` | **Thin (but high quality)** | Only one message in two years, but a detailed, structured UX-design rationale. |
@@ -77,9 +77,9 @@ Many of the 50 channels turned out to have little or no direct Benjamin Chay con
 | `omega_dept_leads.md` | **Empty (for him)** | Listed as R&D rep structurally; no authored decisions in-channel. |
 | `omega_eng_supplychain.md` | **Empty (for him)** | Tagged once, no reply captured. |
 | `r3vac-v2ft-issues-rnd-rst.md` | **Empty (for him)** | Consulted as SME by others repeatedly, but no direct quotes captured. |
-| `s3-npi-channel.md` | **Empty (for him)** | Joined only; very new/low-volume channel. |
+| `s3-npi-channel.md` | **Thin** *(upgraded 2026-09-14)* | Low-volume CM/DV-build coordination channel. One substantive message (2026-09-08), closing out his own two owned assemblies against drawings/BOM/NPPA. |
 | `s3-planning.md` | **Empty (for him)** | Joined only; high-level scheduling channel driven by others. |
-| `s3-sensor-config-group.md` | **Thin** | Driven by the Autonomy/Perception team; one substantive message of his (2026-09-05), corroborating a decision recorded fully in `s3-handlebar.md`. |
+| `s3-sensor-config-group.md` | **Thin but sharp** | Driven by the Autonomy/Perception team. One thread of his (2026-09-05 → 09-08) on the depth-camera/handlebar fix — the decision itself is recorded more fully in `s3-handlebar.md`, but this is the best record of how he handles sustained technical challenge from outside his discipline. |
 | `supplier-visits.md` | **Empty (for him)** | Not even a visible member/participant. |
 | `supplychain-warehouse-production.md` | **Empty (for him)** | Not mentioned or tagged at all. |
 | `sustainingxproduction.md` | **Thin–Moderate (high signal)** | Very high total channel volume, but only 3 substantive Benjamin exchanges found — each one clear and information-dense (consumables ownership, torque standardization, SOP/jig root-cause). |

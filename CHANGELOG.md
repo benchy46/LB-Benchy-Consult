@@ -5,6 +5,60 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-09-14 — window 2026-09-05 to 2026-09-13
+
+- **Messages reviewed:** 36 of his across 7 channels, searched from 2026-09-04
+  (watermark minus one day) and paged to "End of results." One was the
+  already-captured 2026-09-05 `s3-sensor-config-group` Loctite reply — deduped,
+  leaving 35 new across 7 channels. Six threads read in full. One item reviewed
+  and excluded: a `#finance_rnd` invoice post (financial, out of scope per
+  guardrail 4). Routine logistics ("Where is the leads meeting at ah") stayed out
+  of the Decisions sections but is recorded in `mech-leads.md` for the register.
+- **Channels updated:** `s3-mech-architecture` (5 entries — the biggest week
+  here since the seed), `s3-mech-cad-changelog` (3 rollups + a self-correction),
+  `s3-rnd-scm-approval` (6 change notices as one templated entry), `mech-leads`
+  (3), `s3-sensor-config-group` (1 thread continuation), `s3-npi-channel` (1).
+- **New channels added:** none. Three reclassified in `index.md`:
+  `s3-rnd-scm-approval` **Thin → toward Moderate**, `s3-npi-channel`
+  **Empty (for him) → Thin**, `s3-mech-cad-changelog`
+  **Moderate (bot-mediated) → Moderate**.
+- **Principles changed:** two NEW, two REFINES, no EVOLVES.
+  - §1 NEW — the poka-yoke instinct extends past geometry to the parts list,
+    and the criterion is bench confusability rather than BOM line count: "Using
+    M4x8 and M4x6 tgt is banned on the same subassemb, because it is super easy
+    to confuse. Must Use either M4x6 or M4x10" (2026-09-13). Two self-imposed
+    limits recorded with it — never at the price of a mould modification, and
+    run the consolidation at DV.
+  - §3 NEW — he spends a clause killing the specific wrong conclusion a reader
+    is about to draw. Three instances now, three different skim-read failures:
+    "Not a regression from this update" (2026-08-29), "NOT DUPLICATE MESSAGE"
+    (2026-09-11), "nothing left in the EVMR folder" (2026-09-09).
+  - §4 REFINES — the "would a script fail on this?" test does not resolve to a
+    fixed list of mandatory fields; it tracks whichever automation is live. The
+    drawing status field was optional on 2026-08-24 ("if you want to") and
+    mandatory in caps on 2026-09-08, fourteen hours after he shipped the PLM MCP
+    that reads it.
+  - §7 REFINES — he audits his own conventions for payoff and will propose
+    scrapping one: "How important is engineering part number now? Can we have a
+    discussion to see if we can abolish or rethink this? It has been really not
+    helpful at all" (2026-09-07), about an identifier from his own 2024-11-11
+    numbering rule — while tightening the surviving SKU/REV scheme three days
+    later. The scope of the existing "reverses his own decision" principle was
+    widened from a three-week-old rollout to a 22-month-old convention.
+- **Conflict with a reference standard (flagged, reference file untouched per
+  guardrail 6):** the 2026-09-13 screw ruling banning M4x6 and M4x8 in the same
+  subassembly contradicts `reference/cad-integration.md`, which records "**M4x6
+  or M4x8** standardized for cable tie mounts." Recorded in
+  `s3-mech-architecture.md` and in §1; the reference file needs a human refresh
+  from source.
+- **Consult skill changed:** yes — §5 only. Added the confusable-pair rule to
+  the no-new-part ladder; noted that mandatory fields track the live automation
+  and that a new requirement ships with the tool that makes complying free;
+  added the pre-empt-the-misread / correct-in-the-open bullet; and extended the
+  don't-defend-a-beaten-position bullet to cover conceding the confidence
+  argument while the call stands, plus auditing your own standards. §2 (intake)
+  unchanged.
+
 ## 2026-09-07 — window 2026-08-31 to 2026-09-05
 
 - **Messages reviewed:** 23 of his across 9 channels, searched from 2026-08-28
