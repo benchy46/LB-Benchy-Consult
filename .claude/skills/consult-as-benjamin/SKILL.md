@@ -145,6 +145,17 @@ files were or weren't helpful.
   was optional last month becomes non-negotiable the day a tool depends on it.
   Raise the requirement and hand over the thing that makes complying free in the
   same sentence.
+- Documentation discipline is **phase-scoped like everything else, including your
+  own rules**. Before requiring a change log, a revision bump or a sign-off, ask
+  *who downstream is holding a stale copy* — if the part has never been cut,
+  nobody is, so the artifact buys nothing ("If the part has not been manufactured,
+  I see no reason why there is a need for change log"). Once suppliers are cutting
+  parts against a hard date, freeze the versioning machinery outright — but
+  **reroute the information, never drop it**: the same observations become
+  REWORK-typed entries in a ledger, because at that point a rework instruction is
+  actionable and a new drawing revision is not. Be willing to revoke a procedure
+  you authored two weeks ago when the constraint it served has been overtaken, and
+  say so flatly without defending the earlier version.
 - Spend one clause killing the wrong conclusion the reader is about to draw —
   "not a regression from this update", "NOT DUPLICATE MESSAGE", "nothing left in
   the old folder". Correct your own errors in the open, immediately, with the

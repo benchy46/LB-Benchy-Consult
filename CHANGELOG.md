@@ -5,6 +5,70 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-09-23 — window 2026-09-13 to 2026-09-22
+
+- **Messages reviewed:** 57 of his across 10 channels, searched from 2026-09-12
+  (watermark minus one day) and paged to "End of results." The first 12 hits
+  (the 2026-09-13 CAD rollup and the ten per-interface screw rulings) were
+  already captured by the 2026-09-14 refresh — deduped, not re-folded. Net new:
+  ~45 messages from 2026-09-14 onward. Substantive threads were read in full for
+  context; `#s3-dv-build-travel-planning` was reviewed and **deliberately not
+  given a file** — its four messages are flight-booking and payment logistics
+  with no engineering or process content.
+- **Channels updated:** `s3-mech-architecture`, `mech-leads`,
+  `internal_product_mech`, `s3-rnd-scm-approval`, `s3-npi-channel`.
+- **New channels added:** three.
+  - `r5_dock-mech-design` — **the significant one.** ~13 months of him acting as
+    senior design reviewer on the R5 docking station, missed entirely by the
+    original 50-channel sweep. Only a sample has been read (2025-08-27 → 09-05,
+    plus the in-window 2026-09-17 message); the gap from 2025-09-05 to 2026-09-17
+    is now the largest known hole in the knowledge base and is flagged as such in
+    the file's coverage note and in `index.md`.
+  - `hardware-ai-integrations` — created by him 2026-09-18; complete for his
+    content.
+  - `s3-scm-tooling-discussion` — one substantive thread (2026-09-15). Note this
+    channel has heavy participation from **Benjamin Ang Zi Jian**, the name
+    collision; the thread's opening message is his, not Benjamin Chay's.
+- **Principles changed:**
+  - **EVOLVES** (§7, folded into the process/numbering-conventions entry) — his
+    versioning discipline is phase-scoped, not absolute. On 2026-09-18 he revoked
+    the five-step SKU uprev procedure he had authored on 09-10 ("From now on we
+    will not do anymore uprevs of our SKUs"), eight days later, after NPI flagged
+    on 09-14 that suppliers were two weeks from cutting parts ahead of a long
+    holiday. The old rule is kept and dated, not deleted. Three reusable parts
+    recorded: the rule deletes the paperwork but reroutes the information into a
+    REWORK ledger; the test for whether a document is required is *who downstream
+    holds a stale copy* (2026-09-15, `mech-leads`); and he still did the
+    definitional work on the rule he was arguing against (the X→A changelog reset,
+    2026-09-15, `internal_product_mech`).
+  - **NEW** (§5) — treats a moulder's manufacturing limits as a *design input*
+    and argues against a supply-chain gate that defers supplier contact until the
+    drawing is finished; runs it as a dependency argument, hands the remedy back
+    to the process owner, then asks for the smallest edit to their plan
+    (2026-09-15, `s3-scm-tooling-discussion`).
+  - **NEW** (§5) — will not approve a supplier spend he cannot trace to a physical
+    cause; reconstructs a garbled supplier request from his own recent design
+    change, and converts the cheaper option into a test against the drawing rather
+    than a judgement call (2026-09-15, `s3-rnd-scm-approval`).
+  - **REFINES** (§7) — the AI-tooling delivery ladder gained a fourth rung: a
+    standing channel for integration *between* the internally built systems, with
+    an executive sponsor secured informally the evening before (2026-09-17/18).
+  - Recorded in channel files only, as single instances not yet a pattern: the
+    hopper-button load-case rejection (2026-09-14), the read-receipt request on
+    the screw changes (2026-09-16), the spring-spec-screenshot rule derived from
+    the consuming team's task (2026-09-18), and — from the newly added
+    `r5_dock-mech-design` — the 2025-09 detent-knob concession to a colleague's
+    field-failure experience.
+- **Consult skill changed:** yes. One bullet added to `## 5. His register`, under
+  the process/reporting rules: documentation discipline is phase-scoped including
+  your own rules; test a required artifact by asking who downstream holds a stale
+  copy; when suppliers are cutting parts, freeze the versioning machinery but
+  reroute the observations into a REWORK ledger rather than dropping them; revoke
+  your own recent procedure flatly, without defending the earlier version.
+  `## 2. Open with intake` was left unchanged — its existing "Build phase …
+  anything already tooled, ordered, or shipped?" question already surfaces the
+  constraint this finding turns on.
+
 ## 2026-09-14 — window 2026-09-05 to 2026-09-13
 
 - **Messages reviewed:** 36 of his across 7 channels, searched from 2026-09-04
