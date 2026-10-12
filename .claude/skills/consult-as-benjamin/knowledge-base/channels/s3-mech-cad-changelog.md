@@ -52,6 +52,8 @@ Two things are worth reading off this run. **The diagnosis gets more precise eve
 ## Notable Exchanges
 None involving Benjamin directly (aside from Jack Dyer once addressing him in a chassis-CAD update note on 2026-06-22: "it should address the side panel requests you made" — this is Jack's statement about incorporating Benjamin's earlier request, not Benjamin's own words).
 
+**[2026-10-12 refresh] Stage 6 / PV rollups begin.** Three rollups in three days: "S3 Integrated PV_261006 (Stage 6 - PV, first full build, 9 subassemblies)" (2026-10-06 14:14), "PV_261006_I" four hours later ("New in this update: Battery Frame, Crown ASM, Docking Contacts, Filter System"), and "PV_261008" with per-subassembly revision notes (Side Brush + Scoop + Throat Rev 01, Chassis Assembly PV01, Tank/Body + Bumper). Files moved to `M:\S3\Stage 6 Production Readiness\PVMR (Manufacture Readiness)\WIP\Full Robot (Parasolid | Pack and Go)`. Same format as the DV series; the "first full build" label follows directly from his 2026-10-02 full-subassembly-only upload rule (`s3-mech-architecture.md`).
+
 ## Recurring Themes / Principles Observed
 - Benjamin appears to maintain/trigger a periodic "integrated CAD" rollup process that consolidates the latest per-subsystem CAD uploads into one full-robot parasolid/pack-and-go assembly, explicitly noting which subsystems were updated vs. left on a prior revision (and why, e.g. only a partial/investigation file being available).
 - This reflects a general engineering-discipline pattern seen elsewhere in his channels: insistence on a single, dated, traceable source of truth for CAD state at each stage (CSTR/ASTR/EV).

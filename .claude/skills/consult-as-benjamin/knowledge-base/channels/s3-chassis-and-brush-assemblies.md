@@ -17,6 +17,10 @@ Benjamin's design fingerprint is also visible indirectly: Darrion Poon reference
 ## Notable Exchanges
 None of Benjamin's messages here anchor extended threads — both are short, direct coordination asks typical of his terse style seen elsewhere (compare #s3-handlebar). The channel's substantive technical debate (sealing strategy, scoop ground clearance, brush motor positioning, static buildup mitigation) is carried by Darrion Poon, Ayman Khan, Jack Dyer, and Debbie Della Rosa — useful context but not Benjamin's voice.
 
+- **[2026-09-24] Ergonomics call from a render:** "The brush door handle isn't very ergonomic now. will need more depth to grip it." (to Hisham).
+- **[2026-09-28] Accepted moulding a large part, with the fallback named up front.** "Can also, just that the part is quite big so generally will take longer to mold, we just need to be prepared to go with vac cast for production if need be. But we have molded much bigger parts before so, shouldn't be that bad."
+- **[2026-09-29] Preferred leaving material in over cutting a lightening hole.** "I would rather just not cut that square hole, if we are okay with the weight." Jack Dyer: "I am a bit anti weight... Why would you prefer to do that? I'm not totally against it, but I will always err on the side of material/weight save." No reply from Benjamin captured; his reason is not on record.
+
 ## Recurring Themes / Principles Observed
 - Consistent with his pattern elsewhere: prefers to batch decisions into a short joint session ("lets discuss together tmr") rather than decide unilaterally over Slack when multiple design variables (bristle material, diameter, tuft count, rows) interact.
 - Direct, time-boxed follow-up style ("update me ... on monday? Lmk what time can") rather than open-ended check-ins.

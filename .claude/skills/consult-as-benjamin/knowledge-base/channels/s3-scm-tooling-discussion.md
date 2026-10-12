@@ -17,6 +17,8 @@
 ## Notable Exchanges
 - The five-step DFM/tooling sequence Eric Xie laid out on 2026-09-15 is worth retaining as context for any S3 tooling question: ≥3 suppliers at initial DFM → drawings to supply chain → SCM forwards to mould suppliers for DFM report → WeChat group for R&D+supplier finalisation → final mould drawings → SCM compares quotes and picks the supplier and price. Benjamin's amendment moves the WeChat group earlier; the rest stands.
 
+- **[2026-09-30] Handed alternate-supplier sourcing to SCM with the facts they need.** To Eric, Jean and Boon Seong: "for LeapX, our handlebar supplier, they seem to be having some issues making our part [OTH-0126-X0] to the correct spec, so will need your help to see if there is another supplier to do this extrusion molding for us. It took about 38 days for molding previously." Supplier, part SKU, the failure (out of spec) and the previous lead time in one message. Supplier search goes to the function that now owns it (see the 2026-08-26 pricing move in `principles.md` §5), not handled by engineering.
+
 ## Recurring Themes / Principles Observed
 - **Treats supplier manufacturing knowledge as a design input, not a review gate.** The reason he wants early access is that DFM limitations change geometry, and he says so explicitly.
 - **Pushes back on other functions' processes by naming what breaks, not by claiming territory**, and asks them for the remedy before proposing his own.

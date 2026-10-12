@@ -27,6 +27,9 @@
 - **Terse operational reporting on shared kit** — "Print failed" (2026-07-03), "Printer 9 ran out of filament" (2026-07-08) — he reports the print farm's state himself rather than delegating monitoring.
 - Bryan Tan replied to the Toolbox-sync rollout with a screenshot clarifying an unmentioned installer step ("At Step 3, after waiting for awhile, a prompt to press any key to continue will appear") — i.e. the instructions were nearly-but-not-quite complete and a teammate patched the gap in-thread.
 
+- **[2026-09-23] Announced the SolidWorks 2026 upgrade six weeks ahead, with a guided way into the material.** "do take a look at the 2026 Solidworks features. we'll be upgrading to SW 2026 in November. More updates to come soon! Click slide 10. then click on the left side to see each of the new/improved features. (there are videos inside, which is why the file is big)."
+- **[2026-10-06] Default-include in the synced template, delete locally — then conceded the detail.** On Lucas's drawing-process rollout (revision table, tolerances, polymer markings, date stamp): "I will put it in the drawing template that syncs with everyone. After which, if we don't need the table, we just delete on our side, but the template will always have the table first." Lucas argued people would delete and re-add it every time; Benjamin: "Ya, just delete if not need, if not then just leave it is ok." To Ning Wei, three one-line pointers to the right source rather than a fix: "use the drawing notes in lionsbot folder instead" / "Its in the design library on the right" / "Find the lionsbot folder and drag in from there."
+
 ## Recurring Themes / Principles Observed
 
 - **Owns the team's shared infrastructure end-to-end** — CAD toolbox/templates, slicer presets, print farm, laser cutter, mech room, workstation tidiness, Notion/Slack wiring. This is unglamorous stewardship work he does personally and visibly, not something he has delegated.

@@ -5,6 +5,48 @@ entry corresponds to exactly one commit, so any week's interpretation can be
 reverted in isolation with `git revert`. Empty windows are deliberately not
 recorded here — `logs/` is the record that the job fired.
 
+## 2026-10-12 — window 2026-09-21 to 2026-10-11
+
+- **Messages reviewed:** ~198 of his across 16 channels/threads, searched from
+  2026-09-21 (watermark minus one day) and paged to "End of results." The two
+  2026-09-22 hits (`#s3-dv-build-travel-planning`) were already reviewed last run.
+  About 150 are in `#hardware-ai-integrations`. Substantive threads read in full:
+  S3 ceiling-RGB camera and rain sensor (`s3-development`), Stage 6 upload rule
+  (`s3-mech-architecture`), FTO scoping (`mech-leads`), R5 vacuum-motor returns
+  (`r5-mech-architecture`, `r5-trials-support`), drawing-template rollout
+  (`internal_product_mech`), BOM-of-record thread (`hardware-ai-integrations`).
+  **Reviewed but deliberately not filed:** `#s3-dv-build-travel-planning`
+  (flight/insurance logistics) and `#r5-memes-internal` (banter, including a
+  joke about a colleague that falls under the personal-content filter). The
+  Feature Request/Bug Fix Slack List comment threads are folded into
+  `hardware-ai-integrations.md` rather than given their own file.
+- **Channels updated:** `hardware-ai-integrations` (major: moved from Moderate to
+  Rich), `s3-development`, `s3-mech-architecture`, `s3-mech-cad-changelog` (first
+  Stage 6 / PV rollups), `internal_product_mech`, `mech-leads`,
+  `r5-mech-architecture`, `r5-development`, `s3-chassis-and-brush-assemblies`,
+  `s3-scm-tooling-discussion`.
+- **New channels added:** `s3-molding` (standards feed for releasing S3 IM parts),
+  `r5-trials-support` (one field-incident thread), `s3-product-innovation-ip`
+  (thin).
+- **Principles changed:**
+  - NEW §7: one writer per property, one direction of sync, deep links instead
+    of two-way editing; internal component DB outranks the supplier datasheet;
+    Google Sheets stays the read-only BOM of record (2026-09-25 → 10-10).
+  - REFINES §7 (the 2026-09-23 evolution): the DV uprev freeze lapsed at the PV
+    release a week later without announcement ("Do remember to uprev the X
+    number", 2026-09-25), so his "from now on" means "for this build phase."
+  - REFINES §1: at PV the "no new part" instinct runs in reverse, deleting the
+    rain sensor in favour of existing sensors because of BOM cost (2026-10-07 / 10-10).
+  - NEW §3: asks named owners to acknowledge a rule he will enforce (2026-09-25,
+    10-02); open exuberance now appears in a working channel, triggered only by
+    his own tool working end to end (2026-09-26 → 09-29).
+  - Not promoted (single instance, recorded in the channel file only): the
+    "100% not from the motor" read revised the next day (`r5-trials-support`).
+  - No reference-standard contradictions found.
+- **Consult skill changed:** yes. §5 register gained a data-flow bullet (single
+  writer, upstream master, deep links), a "from now on = this build phase" clause,
+  and a one-line note on when enthusiasm appears. §2 intake unchanged.
+
 ## 2026-09-23 — window 2026-09-13 to 2026-09-22
 
 - **Messages reviewed:** 57 of his across 10 channels, searched from 2026-09-12

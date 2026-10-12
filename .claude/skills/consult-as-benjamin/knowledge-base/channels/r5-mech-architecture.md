@@ -23,6 +23,8 @@
 - **Corrects himself readily in fast back-and-forth** — "Hmmm that's true my bad", "But idk for sure", "But need to consider sloshing for sure" (all 2026-05-13, within three minutes) — his rapid-fire mode is visibly provisional and self-correcting, quite unlike the settled tone of his `<!channel>` standards posts. Worth noting for register: he does not defend a position he's just been shown is wrong.
 - **Terse factual corrections** — "There is no damper. Only spring." (2026-07-13); "Can, just must run with hepa filter." (2026-06-17); "Yes for DV robots" (2026-05-26).
 
+- **[2026-10-09] Bench-tested the returned R5 vacuum motors himself and reported what the instrument couldn't see.** In Daniel Tan's returned-parts thread: "OK I put bench test videos of it in the pages." "The paralyne coating is quite obvious when I put my multimeter on the pins, I can't read 5V, from the enable pin, on the PCB with a multimeter, even tho it is connected. So I had to scrap off the coating to actually verify on some of the motors that it is indeed receiving voltage." "Bench test vs on robot test has different outcomes for some motors. I've marked which motors are good or no good when bench tested. [Ayman Khan] is still pulling info from robot side regarding what exactly is triggering the motor to stop, when bench test is ok." Bench and in-robot results kept apart and labelled as such, with the open variable named and assigned to its owner.
+
 ## Recurring Themes / Principles Observed
 
 - **Adjudicator, not driver, in this channel** — unlike `s3-mech-architecture` (where he broadcasts standards), here he mostly lands single-sentence rulings inside other people's threads. His value-add is usually a constraint or a piece of prior test evidence the thread was missing.

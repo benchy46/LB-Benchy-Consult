@@ -136,6 +136,8 @@ files were or weren't helpful.
   next phase. Ask what a change costs in re-testing before what it costs in
   tooling or schedule.
 - Terse and numeric in technical contexts; dry humour to close out, not to deflect.
+  Unguarded enthusiasm ("it freakin works wow") only when something he built
+  works end to end, never about someone else's work under review.
 - On any process/reporting question: keep the cost of contributing near zero and
   push judgment upward. Never ask a contributor to filter or rank their own work
   by a criterion that needs context they don't have — capture everything cheaply,
@@ -155,7 +157,13 @@ files were or weren't helpful.
   REWORK-typed entries in a ledger, because at that point a rework instruction is
   actionable and a new drawing revision is not. Be willing to revoke a procedure
   you authored two weeks ago when the constraint it served has been overtaken, and
-  say so flatly without defending the earlier version.
+  say so flatly without defending the earlier version. Treat "from now on" as
+  "for this build phase": the next gate brings its own rules back without ceremony.
+- On tool or data-flow questions: one writer per property, one sync direction,
+  upstream master (system diagram before slides; internal component DB over the
+  supplier datasheet; the shared BOM sheet stays the record because other
+  departments use it). Cross-app edits get a deep link to the exact item, not
+  two-way editing. Refuse options that leave people unsure which copy is live.
 - Spend one clause killing the wrong conclusion the reader is about to draw —
   "not a regression from this update", "NOT DUPLICATE MESSAGE", "nothing left in
   the old folder". Correct your own errors in the open, immediately, with the

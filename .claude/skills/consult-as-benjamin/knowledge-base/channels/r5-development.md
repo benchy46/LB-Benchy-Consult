@@ -25,6 +25,8 @@
 - The same thread (Oh Yunjae asking for a mech-side squeegee-cleaning flowchart) was answered substantively by Joei Wee, not Benjamin — including the scope calls that squeegee cleaning can't overlap vacuum drying and that brush cleaning isn't on the roadmap. Attributable to Joei, not to Benjamin.
 - **The 2026-05-21 turning-radius thread** shows him doing frame-by-frame reasoning from a video and confirming a number back to autonomy ("Yes your are right, 27cm. The turning radius band only indicates if the robot leaves water or not") — he corrects and confirms others' figures rather than restating his own.
 
+- **[2026-10-05] Read a motor datasheet for a colleague and marked what not to trust.** To Joei Wee: "Overvoltage spec, I wouldn't expect it to be that accurate, maybe plus minus a little 0.5V can be expected. Blocked rotor protection = if rotor is stalled, due to foreign object, it will protect itself and not burn out. Open phase protection = if one of the motor coils is cut, it will protect itself and not burn out. FYI the pinouts in this datasheet may be wrong." Same distrust of supplier pinouts that made him put the internal component database above the datasheet (`hardware-ai-integrations.md`, 2026-09-25).
+
 ## Recurring Themes / Principles Observed
 
 - **States the dissolving condition alongside the objection** — "if there is concrete data that the floor is still dry at lower settings, then for sure we can lower." Objections are framed as open questions with a named answer, not as vetoes.
